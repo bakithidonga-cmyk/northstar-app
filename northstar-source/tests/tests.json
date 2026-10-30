@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Browse a featured title and open its details",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": ["featured title", "title detail dialog", "play preview action"],
+    "description": "Verifies that the featured series opens a useful detail view from the home screen.",
+    "steps": [
+      "Open the home screen",
+      "Select More Info for Glass Harbor",
+      "Review the title details and select Play"
+    ],
+    "expected": "The Glass Harbor detail dialog shows its synopsis and a Play action."
+  },
+  {
+    "name": "Search by title or genre",
+    "viewport": "desktop",
+    "covers": ["title search", "genre search", "empty search result"],
+    "description": "Verifies searching filters the catalog and shows a helpful empty state.",
+    "steps": [
+      "Open search",
+      "Search for Mystery",
+      "Replace the query with an unmatched phrase"
+    ],
+    "expected": "Mystery titles appear first, then the no titles found message appears for the unmatched phrase."
+  },
+  {
+    "name": "Save and remove a title from My List on mobile",
+    "viewport": "mobile",
+    "covers": [
+      "add to My List",
+      "remove from My List",
+      "saved list persistence",
+      "responsive browse layout"
+    ],
+    "description": "Verifies a title can be saved, found in My List, and removed from a narrow screen.",
+    "steps": [
+      "Open a title card",
+      "Add the title to My List",
+      "Select My List in navigation",
+      "Remove the title"
+    ],
+    "expected": "The saved title appears in My List and disappears after removal."
+  }
+]
